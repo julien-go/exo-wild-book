@@ -4,6 +4,7 @@ import styles from './Wilder.module.css'
 
 
 const Wilder = ({name, city, skills}) => {
+	console.log(skills)
 
 	return (
 		<article className={styles.card}>
@@ -17,7 +18,7 @@ const Wilder = ({name, city, skills}) => {
 			</p>
 			<h4>Wild Skills</h4>
 			<ul className={styles.skills}>
-				{skills.map((skill, i) => <Skill key={i} name={skill.title} grade={skill.votes}/>)}
+				{skills.map((skill, i) => <Skill key={i} name={skill.title} grade={skill.grade}/>)}
 			</ul>
 		</article>
 	)
