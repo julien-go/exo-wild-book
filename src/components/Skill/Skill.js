@@ -1,11 +1,10 @@
 import styles from './Skill.module.css'
 
-
-const Skill = ({skillName, grade}) => {
+const Skill = ({name, grade}) => {
 	
 	return (
 		<li className={styles.skill}>
-			{skillName}
+			{name}
 			<span className={styles.votes}>{grade}</span>
 		</li>
 	)

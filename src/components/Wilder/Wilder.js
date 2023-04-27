@@ -3,8 +3,8 @@ import Skill from '../Skill/Skill';
 import styles from './Wilder.module.css'
 
 
-const Wilder = ({name}) => {
-	
+const Wilder = ({name, city, skills}) => {
+
 	return (
 		<article className={styles.card}>
 			<img src={avatar} alt={`${name}'s avatar`}/>
@@ -17,11 +17,7 @@ const Wilder = ({name}) => {
 			</p>
 			<h4>Wild Skills</h4>
 			<ul className={styles.skills}>
-				<Skill skillName='HTML' grade={8}/>
-				<Skill skillName='CSS' grade={7}/>
-				<Skill skillName='React' grade={7}/>
-				<Skill skillName='Node' grade={5}/>
-				<Skill skillName='PHP' grade={1}/>
+				{skills.map((skill, i) => <Skill key={i} name={skill.title} grade={skill.votes}/>)}
 			</ul>
 		</article>
 	)
